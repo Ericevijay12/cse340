@@ -1,0 +1,10 @@
+<nav>
+  <button class="hamburger" id="hamburgerBtn" title="Menu">&#9776;</button>
+  <ul id="primaryNav">
+    <% let activeClass; %>
+    <% navLinks.forEach(link => { %>
+      <% activeClass = (link.path === activePage) ? 'active' : ''; %>
+      <li class="<%= activeClass %>"><a href="<%= link.path %>"><%= link.name %></a></li>
+    <% }); %>
+  </ul>
+</nav>
